@@ -1,5 +1,5 @@
 import {config} from 'dotenv'
-import mysql from 'mysql2'
+import mysql from 'mysql2/promise'
 config()
 
 export const crmHeaders={
@@ -17,4 +17,4 @@ export const dbPool = mysql.createPool({
     connectionLimit: 10, // Adjust the limit according to your needs
     queueLimit: 0,
 
-}).promise()
+})
