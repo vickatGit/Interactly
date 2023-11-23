@@ -8,14 +8,8 @@ export const crmHeaders={
 }
 
 export const dbPool = mysql.createPool({
-    host:"localhost",
-    user:"root",
-    password:"vikas",
-    database:"contacts"
-    // waitForConnections:true,
-    // connectionLimit:10,
-    // maxIdle:10,
-    // idleTimeout:600000,
-    // queueLimit:0
-
+    host:process.env.DB_HOST,
+    user:process.env.DB_USERNAME,
+    password:process.env.DB_PASSWORD,
+    database:process.env.DB_NAME
 }).promise()
